@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartPlanner</title>
+  <link rel="stylesheet" href="plan.css" />
+</head>
+<body>
+  <header>
+    <h1>SmartPlanner</h1>
+    <button id="toggle-theme">🌙 / ☀️</button>
+  </header>
+
+  <main>
+    <!-- Navigation du mois -->
+    <div class="month-nav">
+      <button id="prev-month">⬅️</button>
+      <h2 id="current-month"></h2>
+      <button id="next-month">➡️</button>
+    </div>
+
+    <!-- Grille du calendrier -->
+    <div id="calendar-grid" class="calendar-grid">
+      <!-- Les jours seront générés dynamiquement -->
+    </div>
+  </main>
+
+  <!-- Fenêtre modale pour ajouter un événement -->
+  <div id="event-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" id="close-modal">&times;</span>
+      <h3>Ajouter un événement</h3>
+      <form id="event-form">
+        <input type="text" id="event-title" placeholder="Titre" required />
+        <input type="time" id="event-time" required />
+        <textarea id="event-desc" placeholder="Description"></textarea>
+        <select id="event-category">
+          <option value="Travail">Travail</option>
+          <option value="Personnel">Personnel</option>
+          <option value="Étude">Étude</option>
+        </select>
+        <button type="submit">Ajouter</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="plan.js"></script>
+</body>
+</html>
